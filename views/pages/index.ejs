@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Dev.to Feeds</h1>
+        <ul>
+	    <% data.forEach(function(elem) { %>
+	        <li>
+	            <strong><a href="https://dev.to/<%= elem.link %>"><%= elem.title %></a></strong>
+
+	        </li>
+	    <% }); %>
+	</ul>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
